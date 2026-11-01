@@ -1,21 +1,46 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name</title>
+  <title>Koyo Uekubo</title>
   <link rel="stylesheet" href="style.css">
+  <script src="lang.js"></script>
 </head>
 <body>
   <div class="container">
     <nav>
-      <a href="index.html">About</a>
-      <a href="publications.html">Publications</a>
+      <div>
+        <a href="#about">About</a>
+        <a href="#publications">Publications</a>
+      </div>
+      <div class="lang-switch">
+        <button data-lang="en" onclick="setLang('en')">EN</button> /
+        <button data-lang="ja" onclick="setLang('ja')">JP</button>
+      </div>
     </nav>
 
     <main>
-      <h1>Your Name</h1>
-      <p>ここに自己紹介を書く。</p>
+      <section id="about">
+        <h1 lang="en">Koyo Uekubo</h1>
+        <h1 lang="ja">上久保幸陽</h1>
+
+        <h2>About</h2>
+        <p lang="en">I am a first-year master's student at the Department of Electrical Engineering and Information Systems, Graduate School of Engineering, The University of Tokyo, and a member of the <a href="https://www.akg.t.u-tokyo.ac.jp/">Kawahara Lab</a>. I am interested in computer vision, FPGAs, and edge AI, and I am currently doing research on event cameras.</p>
+        <p lang="ja">私は東京大学大学院工学系研究科 電気系工学専攻に在籍しています。<a href="https://www.akg.t.u-tokyo.ac.jp/">川原研究室</a>に所属している修士1年です。Computer VisionやFPGA、EdgeAIに興味があります。現在はイベントカメラに関する研究をしています。</p>
+      </section>
+
+      <section id="publications">
+        <h2>Publications</h2>
+
+        <h3>2026</h3>
+        <div class="pub">
+          <p class="pub-title">系列データ処理モデルのFPGA実装に関する調査</p>
+          <p class="pub-authors"><strong>上久保幸陽</strong>, 芝慎太朗, 川原圭博</p>
+          <p class="pub-venue" lang="en">IEICE Society Conference 2026, A-14-24 · September 2026</p>
+          <p class="pub-venue" lang="ja">2026年電子情報通信学会ソサイエティ大会, A-14-24 · 2026年9月</p>
+        </div>
+      </section>
     </main>
   </div>
 </body>

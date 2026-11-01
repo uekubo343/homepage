@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  font-family: sans-serif;
+  /* 言語に関係なく同じフォントにする（英字→和文の順に指定） */
+  font-family: "Helvetica Neue", Arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
   line-height: 1.7;
   color: #222;
 }
@@ -13,6 +14,8 @@ body {
 }
 
 nav {
+  display: flex;
+  justify-content: space-between;
   padding: 24px 0;
   border-bottom: 1px solid #ddd;
 }
@@ -29,4 +32,50 @@ nav a:hover {
 
 main {
   padding: 32px 0;
+}
+
+section {
+  margin-bottom: 48px;
+}
+
+/* Publications */
+.pub {
+  margin-bottom: 24px;
+}
+
+.pub p {
+  margin: 0;
+}
+
+.pub-title {
+  font-weight: bold;
+}
+
+.pub-venue {
+  color: #666;
+}
+
+/* 言語切り替え：選ばれていない言語の要素を隠す */
+html[lang="en"] [lang="ja"],
+html[lang="ja"] [lang="en"] {
+  display: none;
+}
+
+.lang-switch {
+  color: #888;
+}
+
+.lang-switch button {
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: #888;
+  cursor: pointer;
+}
+
+html[lang="en"] .lang-switch [data-lang="en"],
+html[lang="ja"] .lang-switch [data-lang="ja"] {
+  color: #222;
+  font-weight: bold;
 }
